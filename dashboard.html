@@ -30,43 +30,48 @@
     <header>
         <nav>
           <ul id="main-menu">
-            <li><a href="#">New Note</a></li>
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
+            <li><a href="#">Do</a></li>
+            <li><a href="#">I</a></li>
+            <li><a href="#">Even</a></li>
+            <li><a href="#">Need</a></li>
+            <li><a href="#">These?</a></li>
+            <li><a href="#">?</a></li>
           </ul>
         </nav>
       </header>
 
+      <!-- TODO add buttons to create, edit, and remove notes -->
+
+      <!-- Each note will have the following properties: title, date created, content, and priority. 
+           Priorities will be determined by a dropdown selector with the following options: 
+           None (default), low, medium, and high. 
+           Priorities will be represented by a specific color when viewed on the dashboard. 
+      -->
+
   <section id="notes">
       <div class="container">
           <div class="row">
+            <!-- TODO populate this field with notes once user is logged in -->
+            <!-- TODO Add initial message 'You don't have any notes yet! -->
+            <!-- Click here to create your first note... -->
               <div class="col-md-8 offset-md-2">
                   <button id="createNote">New Note</button>
-                </div>
-              <div class="col-md-8 offset-md-2">
-                <h1 class="text-center">Note 1</h1>
-              </div>
-              <div class="col-md-8 offset-md-2">
-                <h1 class="text-center">Note 2</h1>
-              </div>
-              <div class="col-md-8 offset-md-2">
-                <h1 class="text-center">Note 3</h1>
               </div>
           </div>
       </div>
   </section>
 
+  <!-- Hidden modal for note creation (possibly edit/deletion later on...) -->
   <section id="note-modal">
       <div class="container">
           <div class="row">
               <div class="col">
                 <form class="contact-form" action="">
-                  <input type="text">
+                  <input type="text" placeholder="Note Title">
                   <br>
-                  <input type="text">
+                  <input type="text" placeholder="Begin typing your note...">
                   <button id="cancelNote">Cancel</button>
+                  <!-- TODO reset input fields when cancel button is clicked -->
                 </form>
               </div>
           </div>
