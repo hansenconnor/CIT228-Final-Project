@@ -1,14 +1,22 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.3
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Apr 16, 2018 at 02:47 AM
--- Server version: 5.6.35
--- PHP Version: 7.1.8
+-- Host: 127.0.0.1
+-- Generation Time: Apr 19, 2018 at 06:31 PM
+-- Server version: 5.7.17
+-- PHP Version: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `final_project_db`
@@ -17,50 +25,44 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `comments`
+-- Table structure for table `auth_users`
 --
 
-CREATE TABLE `comments` (
+CREATE TABLE `auth_users` (
   `id` int(11) NOT NULL,
-  `comment` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
+  `f_name` char(25) NOT NULL,
+  `l_name` char(25) NOT NULL,
+  `username` varchar(25) NOT NULL,
+  `password` varchar(52) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Table structure for table `users`
+-- Dumping data for table `auth_users`
 --
 
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
-  `comment_id` int(11) NOT NULL,
-  `first_name` char(50) NOT NULL,
-  `last_name` char(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `auth_users` (`id`, `f_name`, `l_name`, `username`, `password`) VALUES
+(1, 'Connor', 'Hansen', 'hanse174', 'Rycbar123');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `comments`
+-- Indexes for table `auth_users`
 --
-ALTER TABLE `comments`
+ALTER TABLE `auth_users`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `comment_id` (`comment_id`);
-
---
--- Constraints for dumped tables
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- Constraints for table `users`
+-- AUTO_INCREMENT for table `auth_users`
 --
-ALTER TABLE `users`
-  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`comment_id`) REFERENCES `comments` (`id`);
+ALTER TABLE `auth_users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

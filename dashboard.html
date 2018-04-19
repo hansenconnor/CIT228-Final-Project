@@ -25,25 +25,25 @@
   <![endif]-->
 </head>
 
-<header>
-  <nav>
-    <ul id="main-menu">
-      <li><a href="#">New Note</a></li>
-      <li><a href="#">link</a></li>
-      <li><a href="#">link</a></li>
-      <li><a href="#">link</a></li>
-      <li><a href="#">link</a></li>
-    </ul>
-  </nav>
-</header>
-
 <body>
+
+    <header>
+        <nav>
+          <ul id="main-menu">
+            <li><a href="#">New Note</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+          </ul>
+        </nav>
+      </header>
+
   <section id="notes">
       <div class="container">
           <div class="row">
               <div class="col-md-8 offset-md-2">
-                  <button id="createNote">Create Note</button>
-                  <button id="cancelNote">Cancel Note</button>
+                  <button id="createNote">New Note</button>
                 </div>
               <div class="col-md-8 offset-md-2">
                 <h1 class="text-center">Note 1</h1>
@@ -61,11 +61,12 @@
   <section id="note-modal">
       <div class="container">
           <div class="row">
-              <div class="col-md-8 offset-md-2">
-                <form action="">
+              <div class="col">
+                <form class="contact-form" action="">
                   <input type="text">
                   <br>
                   <input type="text">
+                  <button id="cancelNote">Cancel</button>
                 </form>
               </div>
           </div>
