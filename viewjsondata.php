@@ -2,9 +2,9 @@
 
 $comments = file_get_contents("comments.json");
 
-$display="<div id='chocolate'><h1>Site top comments</h1>";
+$display="<div><h1>Site top comments</h1>";
 
-    $display="<div id='chocolate'><h1>All Comments</h1>";
+    $display="<div><h1>All Comments</h1>";
 	$commentObj = json_decode($comments);
 	foreach ($commentObj->comment as $comment){
 	  $id = $comment->id;
@@ -16,24 +16,14 @@ $display="<div id='chocolate'><h1>Site top comments</h1>";
 ?>
 
 <!DOCTYPE html>
-
 <html>
-
 <head>
-
 <title>Comments</title>
-
 </head>
-
 <body>
-
 <?php 
-
 echo $display;
-
 ?> 
-
 </body>
-
 </html>	 
 

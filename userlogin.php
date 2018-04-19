@@ -10,7 +10,7 @@ if (($_POST['username']=="") || ($_POST['password']=="")) {
 }
 $display_block="";
 //connect to server and select database
-$mysqli = mysqli_connect("localhost", "root", "root", "assignment_08_db") or die(mysql_error());
+$mysqli = mysqli_connect("localhost", "root", "", "final_project_db") or die(mysql_error());
 
 //use mysqli_real_escape_string to clean the input
 $safe_username = mysqli_real_escape_string($mysqli, $_POST['username']);
@@ -25,16 +25,12 @@ $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
 if (mysqli_num_rows($result) == 1) {
 	$_SESSION["username"] = $username;
 	// TODO - change this to redirect to final project menu
-	header("Location:success.html");
+	header("Location:dashborard.html");
 	exit;
 } else {
 	$_SESSION["error"] = $error;
 	header("location: index.php"); //send user back to the login page.
 	// display invalid username or password message
-
-    //redirect back to login form if not authorized
-    // $display_block = "<p style='text-align:center;color:red;font-size:2em;'>Please contact IT, your username and password are not valid</p>";
-    // $display_block .= "<p style='text-align:center;font-size:2em;'><a href='index.html'> Return to login</a></p>";
 }
 
 //close connection to MySQL
