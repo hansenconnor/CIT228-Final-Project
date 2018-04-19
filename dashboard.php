@@ -1,10 +1,15 @@
+<!-- start session -->
+<?php
+  session_start();
+?>
+
 <!doctype html>
 
 <html lang="en">
 <head>
   <meta charset="utf-8">
 
-  <title>Login Success</title>
+  <title>Dashboard</title>
   <meta name="author" content="Connor Hansen">
     
   <!-- custom styles -->
@@ -18,14 +23,41 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 
-
-
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 </head>
 
+
+<!-- Check if the user has any notes in the database -->
+<!-- if not -> display prompt to create first note -->
+
 <body>
+
+<?php
+
+$mysqli = mysqli_connect("localhost", "root", "", "final_project_db") or die(mysql_error());
+  //
+  // query database to check if note exists using username from session var
+  //create and issue the query
+$sql = "SELECT username, note FROM user_notes WHERE username = 'hanse174'";
+$result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
+
+echo $_SESSION["username"];
+
+// 
+// check if a note exists
+if (mysqli_num_rows($result) == 1) {
+  // note exists so alert user
+	echo("Note exists!");
+	exit;
+} else {
+  // note doesn't exist
+  echo("No Note!");
+}
+?>
+
+
 
     <header>
         <nav>
