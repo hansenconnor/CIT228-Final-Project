@@ -1,0 +1,89 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    /* background: url('../assets/images/pexels-photo-911738.jpeg');
+    background-size: cover; */
+}
+
+h1 {
+    font-weight: 300;
+}
+
+.menu-row {
+    /* box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 
+    0 15px 12px rgba(0, 0, 0, 0.22);
+    background-color: #fafafa;
+    border-radius: 5px;
+    padding: 25px;
+    margin: 50px 0; */
+}
+
+#main-menu {
+    padding: 0;
+    margin-top: 20px;
+    list-style-type: none;
+}
+
+#main-menu li {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#main-menu a {
+    padding: 10px 20px;
+}
+
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; 
+    display: flex;
+    align-items: center;
+    background: url('../assets/images/pexels-photo-911738.jpeg');
+    background-size: cover;
+}
+
+fieldset {
+    margin: 50px 0 !important;
+}
+
+input {
+    padding: 5px 10px;
+    width: 100%;
+    margin: 10px 0 !important;
+}
+
+#login_button {
+    width: 100%;
+    cursor: pointer;
+    padding: 0 8px;
+    background: #3897f0;
+    border: 1px solid #3897f0;
+    color: #fff;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 14px;
+    height: 28px;
+    line-height: 26px;
+    outline: none;
+    white-space: nowrap;
+    transition: 0.5s ease background;
+}
+
+#login_button:hover {
+    background:#1283ed;
+}
+
+.login_container {
+    -webkit-box-shadow: 0px 8px 21px 1px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 8px 21px 1px rgba(0,0,0,0.1);
+    box-shadow: 0px 8px 21px 1px rgba(0,0,0,0.1);
+    background-color: #fafafa;
+    border-radius: 5px;
+    padding: 25px;
+    margin: 50px 0;
+}
