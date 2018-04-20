@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 19, 2018 at 06:31 PM
+-- Generation Time: Apr 20, 2018 at 02:52 AM
 -- Server version: 5.7.17
 -- PHP Version: 5.6.30
 
@@ -43,6 +43,18 @@ CREATE TABLE `auth_users` (
 INSERT INTO `auth_users` (`id`, `f_name`, `l_name`, `username`, `password`) VALUES
 (1, 'Connor', 'Hansen', 'hanse174', 'Rycbar123');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_notes`
+--
+
+CREATE TABLE `user_notes` (
+  `id` int(11) NOT NULL,
+  `username` varchar(25) NOT NULL,
+  `note` varchar(280) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
 --
 -- Indexes for dumped tables
 --
@@ -54,6 +66,13 @@ ALTER TABLE `auth_users`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `user_notes`
+--
+ALTER TABLE `user_notes`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`username`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -61,6 +80,11 @@ ALTER TABLE `auth_users`
 -- AUTO_INCREMENT for table `auth_users`
 --
 ALTER TABLE `auth_users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `user_notes`
+--
+ALTER TABLE `user_notes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
