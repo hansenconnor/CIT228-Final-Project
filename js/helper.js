@@ -1,11 +1,13 @@
 $(document).ready(function(){
-    
+
+
     $("#createNote").click(function() {
-        $('#note-modal').css('display','block');
+        $('#note-modal').fadeIn(350);
     });
 
     $("#cancelNote").click(function() {
-        $('#note-modal').css('display','none');
+        $('#note-modal').fadeOut(350);
     });
 
+    
  });
