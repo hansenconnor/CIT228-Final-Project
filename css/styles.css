@@ -43,7 +43,7 @@ h1 {
     height: calc(100% - 75px);
 }
 
-#note-modal {
+.note-modal {
     display: none;
     position: fixed;
     left: 0;

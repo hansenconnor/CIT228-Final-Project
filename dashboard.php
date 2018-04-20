@@ -1,9 +1,5 @@
 <!-- start session -->
-<?php
-  session_start();
-?>
-
-<!doctype html>
+<?php session_start(); ?>
 
 <html lang="en">
 <head>
@@ -13,7 +9,7 @@
   <meta name="author" content="Connor Hansen">
     
   <!-- custom styles -->
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" href="css/styles.css">
   <!-- bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
@@ -48,29 +44,31 @@
       </header>
 
 <?php
-$mysqli = mysqli_connect("localhost", "root", "", "final_project_db") or die(mysql_error());
+$mysqli = mysqli_connect("localhost", "root", "root", "final_project_db") or die(mysql_error());
   //
   // query database to check if note exists using username from session var
   //create and issue the query
 $sql = "SELECT username, note FROM user_notes WHERE username = '{$_SESSION['username']}'";
 $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
 
-
 // 
 // check if a note exists
 if (mysqli_num_rows($result) == 1) {
   // note exists
-  include('notes.html');
+  echo "<script>location.href = 'notes.php';</script>";
 	exit;
 } else {
   // note doesn't exist
-  include('empty-notes.html');
+  include('empty-notes.php');
 }
+
+//
+// close connection
+mysqli_close($mysqli);
 ?>
 
       
-
-  <!-- helpers -->
-  <script src="js/helper.js"></script>
+<footer> <!-- helpers -->
+  <script src="js/helper.js"></script></footer>
 </body>
 </html>

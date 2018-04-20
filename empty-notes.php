@@ -6,7 +6,7 @@
            Priorities will be represented by a specific color when viewed on the dashboard. 
       -->
 
-      <section id="notes">
+      <section id="empty-notes">
             <div class="container">
                 <div class="row">
                   <!-- TODO populate this field with notes once user is logged in -->
@@ -15,22 +15,24 @@
                     <div class="col-md-8 offset-md-2 text-center">
                         <img src="assets\icons\shocked.png" alt="shocked emoji" style="width:20%;margin:20px;">
                         <span style="display:block; width:100%;">You don't have any notes yet!</span>
-                        <button class="btn" id="createNote" style="background-color: #2ecc71;">Click here to create your first note</button>
+                        <a href="#" class="btn createNote" style="background-color: #2ecc71;">Click here to create your first note</a>
                     </div>
                 </div>
             </div>
         </section>
       
         <!-- Hidden modal for note creation (possibly edit/deletion later on...) -->
-        <section id="note-modal">
+        <!-- Displayed upon clicking 'create note' button -->
+        <section class="note-modal">
             <div class="container">
                 <div class="row">
                     <div class="col">
-                      <form class="contact-form" action="">
-                        <input type="text" placeholder="Note Title">
+                      <form class="contact-form" action="scripts/insert_note.php" method="POST">
+                        <input type="text" name="note_title" placeholder="Note Title">
                         <br>
-                        <input type="text" placeholder="Begin typing your note...">
-                        <button class="btn" id="cancelNote" style="background-color: #cf372f;">Cancel</button>
+                        <input type="text" name="note_text" placeholder="Begin typing your note...">
+                        <a href="#" class="btn" id="cancelNote" style="background-color: #cf372f;">Cancel</a>
+                        <input  class="btn" type="submit">Submit</input>
                         <!-- TODO reset input fields when cancel button is clicked -->
                       </form>
                     </div>
