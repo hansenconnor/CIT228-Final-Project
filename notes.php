@@ -33,7 +33,7 @@
         <nav>
           <ul id="main-menu">
             <li><a href="#" class="createNote">Create Note</a></li>
-            <li><a href="#">Logout</a></li>
+            <li><a href="scripts/logout.php">Logout</a></li>
           </ul>
         </nav>
       </header>

@@ -9,6 +9,5 @@ $(document).ready(function(){
     $(".cancelNote").click(function() {
         $('.note-modal').css('display','none')
     });
-
     
  });
