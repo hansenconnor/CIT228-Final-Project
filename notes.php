@@ -31,8 +31,7 @@
 <body>
 <header>
         <nav>
-          <ul id="main-menu">
-            <li><a href="#" class="createNote">Create Note</a></li>
+          <ul id="main-menu">  
             <li><a href="scripts/logout.php">Logout</a></li>
           </ul>
         </nav>
@@ -40,7 +39,7 @@
 
 
       <section id="notes">
-        <div class="container">
+        <div class="container" id="results">
             <div class="row">
               <!-- TODO populate this field with notes once user is logged in -->
               <!-- TODO Add initial message 'You don't have any notes yet! -->
@@ -51,16 +50,13 @@
                 <div class="col-md-12 text-center">
                     <span style="display:block; width:100%;">Here are your notes:</span><br>
                 </div>
-
-                <!-- div to hold notes -->
-                <div id="results" class="col-md-12 text-center"></div>
-                <!-- get all notes and format in html -->
-                <script>
+            </div>
+            <!-- get all notes and format in html -->
+            <script>
                 $.ajax({url: "scripts/display_notes.php"}).done(function( html ) {
                         $("#results").append(html);
                     });
-                </script>
-            </div>
+            </script>
         </div>
     </section>
   
@@ -73,7 +69,7 @@
                   <form class="contact-form" action="scripts/insert_note.php" method="POST">
                     <input type="text" name="note_title" placeholder="Note Title">
                     <br>
-                    <input type="text" name="note_text" placeholder="Begin typing your note...">
+                    <textarea name="note_text" cols="30" rows="10" placeholder="Begin typing your note..."></textarea>
                     <a href="#" class="btn cancelNote" style="background-color: #cf372f;">Cancel</a>
                     <input  class="btn" type="submit"></input>
                     <!-- TODO reset input fields when cancel button is clicked -->

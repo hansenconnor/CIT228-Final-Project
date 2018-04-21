@@ -25,7 +25,7 @@ if(count(array_filter($_POST))!=count($_POST)){
       $noteText = $_POST['note_text'];
       //
       // define sql command: push note and text ( TODO add other properties i.e. priority, date added, etc. )
-      $sql = "INSERT INTO user_notes (username, note) VALUES ('$noteUsername', '$noteText')";
+      $sql = "INSERT INTO `user_notes` (username, title, note) VALUES ('$noteUsername', '$noteTitle', '$noteText')";
 
       if (mysqli_query($mysqli, $sql)) {
         // redirect to dashboard

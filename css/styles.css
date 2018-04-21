@@ -9,22 +9,27 @@ body {
     background-size: cover; */
 }
 
-.haha {
+.note-wrapper {
     padding-top: 20px;
     padding-bottom: 15px;
     margin-bottom: 30px;
-    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 0px 5px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 0px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.15);
     transition: 0.5s ease all;
     cursor: pointer;
 }
 
-.haha:hover {
-    transform:translateY(-5px);
-    -webkit-box-shadow: 0 6px 5px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0 6px 5px rgba(0, 0, 0, 0.15);
-    box-shadow: 0 6px 5px rgba(0, 0, 0, 0.15);
+.note-wrapper:hover {
+    /* transform:translateY(-5px); */
+    -webkit-box-shadow: 0 0px 15px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 0px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.15);
+}
+
+.note-text {
+    display: none;
+    padding: 25px;
 }
 
 a:hover {
@@ -59,9 +64,9 @@ h1 {
 }
 
 #notes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
     height: calc(100% - 75px);
 }
 

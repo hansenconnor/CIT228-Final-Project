@@ -67,11 +67,11 @@ $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
 // 
 // check if a note exists
 if (mysqli_num_rows($result) >= 1) {
-  // note exists
+  // note exists -> redirect to notes dash
   echo "<script>location.href = 'notes.php';</script>";
 	exit;
 } else {
-  // note doesn't exist
+  // note doesn't exist -> redirect to empty notes dash
   include('empty-notes.php');
 }
 
