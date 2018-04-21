@@ -1,6 +1,11 @@
+<!-- This file is just checking if any notes exist in the database 
+and redirecting to the appropriate page... Move this check to the login script
+-->
+
+
+
 <!-- start session -->
 <?php session_start(); ?>
-<!-- TODO destroy session and then run script to get session username?? HOW?!?! -->
 
 <html lang="en">
 <head>

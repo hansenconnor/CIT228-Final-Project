@@ -32,12 +32,8 @@
 <header>
         <nav>
           <ul id="main-menu">
-            <li><a href="#">Do</a></li>
-            <li><a href="#">I</a></li>
-            <li><a href="#">Even</a></li>
-            <li><a href="#">Need</a></li>
-            <li><a href="#">These?</a></li>
-            <li><a href="#">?</a></li>
+            <li><a href="#" class="createNote">Create Note</a></li>
+            <li><a href="#">Logout</a></li>
           </ul>
         </nav>
       </header>
@@ -50,9 +46,12 @@
               <!-- TODO Add initial message 'You don't have any notes yet! -->
               <!-- Click here to create your first note... -->
                 <div class="col-md-8 offset-md-2 text-center">
-                    <span style="display:block; width:100%;">Here are your notes</span>
-                    <a href="#" class="btn createNote" style="background-color: #2ecc71;">Click here to create your first note</a>
+                    <a href="#" class="btn createNote" style="background-color: #2ecc71;">Create Note</a>
                 </div>
+                <div class="col-md-12 text-center">
+                    <span style="display:block; width:100%;">Here are your notes:</span><br>
+                </div>
+
                 <!-- div to hold notes -->
                 <div id="results" class="col-md-12 text-center"></div>
                 <!-- get all notes and format in html -->
@@ -75,8 +74,8 @@
                     <input type="text" name="note_title" placeholder="Note Title">
                     <br>
                     <input type="text" name="note_text" placeholder="Begin typing your note...">
-                    <a href="#" class="btn" id="cancelNote" style="background-color: #cf372f;">Cancel</a>
-                    <input  class="btn" type="submit">Submit</input>
+                    <a href="#" class="btn cancelNote" style="background-color: #cf372f;">Cancel</a>
+                    <input  class="btn" type="submit"></input>
                     <!-- TODO reset input fields when cancel button is clicked -->
                   </form>
                 </div>

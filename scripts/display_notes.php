@@ -17,8 +17,9 @@ $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
 if (mysqli_num_rows($result) >= 1) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "Note ID: " . $row["id"] . " Username: " . $row["username"] . " Note: " . $row["note"];
-        ?><br><?php
+        $noteInfo = "Note ID: " . $row["id"] . " Username: " . $row["username"] . " Note: " . $row["note"];
+        echo ('<div class="col-md-12 haha">' . $noteInfo . '</div>');
+        
     }
     mysql_free_result($result);
 } else {
