@@ -47,8 +47,8 @@
                 <div class="col-md-8 offset-md-2 text-center">
                     <a href="#" class="btn createNote" style="background-color: #2ecc71;">Create Note</a>
                 </div>
-                <div class="col-md-12 text-center">
-                    <span style="display:block; width:100%;">Here are your notes:</span><br>
+                <div class="col-md-8 offset-md-2">
+                    <span style="display:block; width:100%;"><h2>Notes</h2></span><br>
                 </div>
             </div>
             <!-- get all notes and format in html -->

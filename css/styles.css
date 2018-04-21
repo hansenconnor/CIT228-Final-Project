@@ -1,23 +1,52 @@
+/* fonts */
+/* montserrat */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900');
+
 html {
     height: 100%;
 }
 body {
     height: 100%;
     width: 100%;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif !important;
     /* background: url('../assets/images/pexels-photo-911738.jpeg');
     background-size: cover; */
+}
+p {
+    color:rgba(0, 0, 0, .5);
+}
+
+.note-header {
+    align-items: center;
+    display: flex;
+}
+.delete-note {
+    width: auto;
+    height: 17px;
+    margin-left: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+.delete-note:hover {
+    opacity: 1 !important;
 }
 
 .note-wrapper {
     padding-top: 20px;
     padding-bottom: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    border-radius: 5px;
     -webkit-box-shadow: 0 0px 5px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0 0px 5px rgba(0, 0, 0, 0.15);
     box-shadow: 0 0px 5px rgba(0, 0, 0, 0.15);
     transition: 0.5s ease all;
     cursor: pointer;
+}
+
+.note-wrapper:hover .delete-note {
+    visibility: visible;
+    opacity: 0.2;
 }
 
 .note-wrapper:hover {

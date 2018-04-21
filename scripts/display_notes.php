@@ -21,9 +21,11 @@ if (mysqli_num_rows($result) >= 1) {
         $text = $row["note"];
         echo ('<div class="row">');
             echo ('<div class="col-md-8 offset-md-2 note-wrapper">');
-                echo ('<div class="note-title">' . $title . '</div>');
-                echo ('<button class="delete-note" id="'.$row["id"].'">Delete</button>');
-                echo ('<div class="note-text">'. $text .'</div>');
+                echo ('<div class="note-header">');
+                    echo ('<div class="note-title">' . $title . '</div>');
+                    echo('<img src="../assets/icons/close.png" class="delete-note" id="'.$row["id"].'"/>');
+                echo ('</div>');
+                echo ('<div class="note-text"><p>'. $text .'</p></div>');
             echo ('</div>');
         echo ('</div>');
     }
