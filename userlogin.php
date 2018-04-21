@@ -1,6 +1,8 @@
 <?php
 	session_start();
 
+	// TODO complete logout script by checking if session user / pass exists and is accurate
+
 $error = "username/password incorrect";
 
 //check for required fields from the form

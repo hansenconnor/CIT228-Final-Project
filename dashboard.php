@@ -5,7 +5,14 @@ and redirecting to the appropriate page... Move this check to the login script
 
 
 <!-- start session -->
-<?php session_start(); ?>
+<?php session_start(); 
+// check if user is logged in
+if(!(isset($_SESSION["username"])))
+{ 
+  // not logged in so redirect to login screen
+  echo "<script>location.href = 'index.php';</script>"; 
+}
+?>
 
 <html lang="en">
 <head>
