@@ -1,5 +1,6 @@
 <!-- start session -->
 <?php session_start(); ?>
+<!-- TODO destroy session and then run script to get session username?? HOW?!?! -->
 
 <html lang="en">
 <head>
@@ -53,7 +54,7 @@ $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
 
 // 
 // check if a note exists
-if (mysqli_num_rows($result) == 1) {
+if (mysqli_num_rows($result) >= 1) {
   // note exists
   echo "<script>location.href = 'notes.php';</script>";
 	exit;

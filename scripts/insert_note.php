@@ -1,10 +1,11 @@
 <!-- start session -->
 <?php session_start(); ?>
 
-
 <?php 
 
+//
 // next version add check if note already exists -> and prompt user to overwrite if so
+//
 
 //
 // connect to database using session variables ( user/pass )
@@ -13,7 +14,9 @@ $mysqli = mysqli_connect("localhost", "root", "root", "final_project_db") or die
 // 
 // check if note title and note text -> store to variables
 if(count(array_filter($_POST))!=count($_POST)){
+  // TODO add span error if one or more inputs are empty
     echo ("something is empty");
+    header("Location: ../dashboard.php");
   }
   else {
     echo ("All form fields filled");
@@ -34,19 +37,7 @@ if(count(array_filter($_POST))!=count($_POST)){
     }
   }
 
-
-
-
-//
-// get result
-// $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
-
-
-
 //
 // close connection
 mysqli_close($mysqli);
-
-//
-// define sql command: push note and text ( TODO add other properties i.e. priority, date added, etc. )
 ?>

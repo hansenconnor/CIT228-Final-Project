@@ -3,11 +3,11 @@ $(document).ready(function(){
 
     $(".createNote").click(function() {
         $('.note-modal').css('display','block');
-        alert("clicked");
+        // alert("clicked");
     });
 
     $(".cancelNote").click(function() {
-        $('.note-modal').fadeOut(350);
+        $('.note-modal').css('display','none')
     });
 
     

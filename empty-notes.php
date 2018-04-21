@@ -31,8 +31,8 @@
                         <input type="text" name="note_title" placeholder="Note Title">
                         <br>
                         <input type="text" name="note_text" placeholder="Begin typing your note...">
-                        <a href="#" class="btn" id="cancelNote" style="background-color: #cf372f;">Cancel</a>
-                        <input  class="btn" type="submit">Submit</input>
+                        <a href="#" class="btn cancelNote" style="background-color: #cf372f;">Cancel</a>
+                        <input  class="btn" type="submit"></input>
                         <!-- TODO reset input fields when cancel button is clicked -->
                       </form>
                     </div>

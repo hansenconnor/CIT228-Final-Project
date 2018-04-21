@@ -67,7 +67,7 @@
   
     <!-- Hidden modal for note creation (possibly edit/deletion later on...) -->
     <!-- Displayed upon clicking 'create note' button -->
-    <section class"note-modal">
+    <section class="note-modal">
         <div class="container">
             <div class="row">
                 <div class="col">
