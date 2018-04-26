@@ -29,15 +29,18 @@
 <!-- if not -> display prompt to create first note -->
 
 <body>
-<header>
+    <header>
         <nav>
-          <ul id="main-menu">  
-            <li><a href="#">Export JSON</a></li>
-            <li><a href="#">Export XML</a></li>
-            <li><a href="scripts/logout.php">Logout</a></li>  
-        </ul>
+            <div id ="mobile-menu">
+                <span class></span>
+            </div>
+            <ul id="main-menu">  
+                <li><a href="#">Export JSON</a></li>
+                <li><a href="#">Export XML</a></li>
+                <li><a href="scripts/logout.php">Logout</a></li>  
+            </ul>
         </nav>
-      </header>
+    </header>
 
 
       <section id="notes">

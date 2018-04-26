@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+    
     $(".createNote").click(function() {
         $('.note-modal').fadeIn(200);
         $( "input[name=note_title]" ).focus();

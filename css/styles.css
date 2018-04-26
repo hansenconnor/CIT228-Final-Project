@@ -214,6 +214,20 @@ nav {
 
 #main-menu a {
     padding: 10px 20px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(0,0,0,0.2);
+    transition: 0.5s ease color;
+}
+
+#main-menu a {
+    text-decoration: none;
+}
+
+#main-menu a:hover {
+    color: #000000;
 }
 
 .vertical-center {
