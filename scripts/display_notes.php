@@ -22,9 +22,9 @@ if (mysqli_num_rows($result) >= 1) {
         $title = $row["title"];
         $text = $row["note"];
         echo ('<div class="row">');
-            echo ('<div class="col-md-8 offset-md-2 note-wrapper">');
+            echo ('<div class="col-md-8 offset-md-2 note-wrapper" id="'.$row["id"].'">');
                 echo ('<div class="note-header">');
-                    echo ('<div class="note-title">' . $title . '</div>');
+                    echo ('<div class="note-title" id="'.$row["id"].'">' . $title . '</div>');
                     echo('<img src="assets/icons/pencil-edit-button.png" class="edit-note" id="'.$row["id"].'"/>');
                     echo('<img src="assets/icons/close.png" class="delete-note" id="'.$row["id"].'"/>');
                 echo ('</div>');
