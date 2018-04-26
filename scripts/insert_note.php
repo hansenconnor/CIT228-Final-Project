@@ -14,7 +14,7 @@ include ('db_connect.php');
 
 // 
 // check if note title and note text -> store to variables
-if(count(array_filter($_POST))!=count($_POST)){
+if(!$_POST['note_title'] || !$_POST['note_text']){
   // TODO add span error if one or more inputs are empty
     header("Location: ../dashboard.php");
   }

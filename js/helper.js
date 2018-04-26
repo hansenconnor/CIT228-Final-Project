@@ -1,12 +1,12 @@
 $(document).ready(function(){
 
     $(".createNote").click(function() {
-        $('.note-modal').css('display','block');
+        $('.note-modal').fadeIn(200);
         $( "input[name=note_title]" ).focus();
     });
 
     $(".cancelNote").click(function() {
-        $('.note-modal').css('display','none');
+        $('.note-modal').fadeOut(200);
             
         // reset form action
         $('#note-form').attr('action', 'scripts/insert_note.php');
@@ -69,7 +69,7 @@ $(document).ready(function(){
         $('#note-form').attr('action', 'scripts/update_entry.php');
 
         // display the edit note form
-        $('.note-modal').css('display','block');
+        $('.note-modal').fadeIn(200);
         $( "input[name=note_title]" ).focus();
 
         $('input[name=note_id]').val(noteID);
