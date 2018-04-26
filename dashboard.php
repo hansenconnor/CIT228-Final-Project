@@ -57,7 +57,7 @@ if(!(isset($_SESSION["username"])))
       </header>
 
 <?php
-$mysqli = mysqli_connect("localhost", "root", "root", "final_project_db") or die(mysql_error());
+$mysqli = mysqli_connect("localhost", "root", "", "final_project_db") or die(mysql_error());
   //
   // query database to check if note exists using username from session var
   //create and issue the query

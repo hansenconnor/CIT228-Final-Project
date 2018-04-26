@@ -11,7 +11,7 @@ if (($_POST['username']=="") || ($_POST['password']=="")) {
     exit;
 }
 //connect to server and select database
-$mysqli = mysqli_connect("localhost", "root", "root", "final_project_db") or die(mysql_error());
+$mysqli = mysqli_connect("localhost", "root", "", "final_project_db") or die(mysql_error());
 
 //use mysqli_real_escape_string to clean the input
 $safe_username = mysqli_real_escape_string($mysqli, $_POST['username']);

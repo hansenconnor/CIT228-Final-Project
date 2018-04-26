@@ -32,8 +32,10 @@
 <header>
         <nav>
           <ul id="main-menu">  
-            <li><a href="scripts/logout.php">Logout</a></li>
-          </ul>
+            <li><a href="#">Export JSON</a></li>
+            <li><a href="#">Export XML</a></li>
+            <li><a href="scripts/logout.php">Logout</a></li>  
+        </ul>
         </nav>
       </header>
 
@@ -70,8 +72,8 @@
                     <input type="text" name="note_title" placeholder="Note Title">
                     <br>
                     <textarea name="note_text" cols="30" rows="10" placeholder="Begin typing your note..."></textarea>
-                    <a href="#" class="btn cancelNote" style="background-color: #cf372f;">Cancel</a>
-                    <input  class="btn" type="submit"></input>
+                    <input  class="btn submit" type="submit"></input>
+                    <a href="#" class="btn cancelNote">Cancel</a>
                     <!-- TODO reset input fields when cancel button is clicked -->
                   </form>
                 </div>

@@ -16,18 +16,76 @@ p {
     color:rgba(0, 0, 0, .5);
 }
 
+textarea {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 20px;
+}
+input {
+    padding: 5px 0px 5px 20px;
+    width: 100%;
+    margin: 10px 0 !important;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.createNote {
+    color: #FFF;
+}
+
+#results {
+    margin-top: 100px;
+}
+
 .note-header {
     align-items: center;
     display: flex;
 }
+
+.submit {
+    background-color: #FFF;
+    color: rgba(0,0,0,0.5);
+}
+.submit:hover {
+    background-color:#2ecc71;
+    color: #FFF !important;
+}
+
+.cancelNote {
+    width: 100%;
+    background-color: #FFF;
+    color: rgba(0,0,0,0.5);
+}
+
+.cancelNote:hover {
+    background-color: #cf372f;
+    color: #FFF !important;
+}
+
 .delete-note {
     width: auto;
     height: 17px;
-    margin-left: auto;
+    /* margin-left: auto; */
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s, visibility 0.5s;
 }
+
+.edit-note {
+    width: auto;
+    height: 17px;
+    margin-left: auto;
+    opacity: 0;
+    /* visibility: hidden; */
+    padding-right: 10px;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.edit-note:hover {
+    opacity: 1 !important;
+}
+
 .delete-note:hover {
     opacity: 1 !important;
 }
@@ -44,7 +102,7 @@ p {
     cursor: pointer;
 }
 
-.note-wrapper:hover .delete-note {
+.note-wrapper:hover .delete-note, .note-wrapper:hover .edit-note {
     visibility: visible;
     opacity: 0.2;
 }
@@ -73,7 +131,7 @@ button:hover {
     position: relative;
   
     display: block;
-    margin: 20px auto 10px;
+    margin: 10px auto;
     padding: .5rem 1rem !important;
   
     overflow: hidden;
@@ -81,10 +139,10 @@ button:hover {
     border-width: 0;
     outline: none;
     border-radius: 2px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
     
-    color: #ecf0f1;
-    
+    font-weight: 600 !important;
+
     transition: background-color .3s;
   }
 
@@ -161,12 +219,6 @@ nav {
 
 fieldset {
     margin: 50px 0 !important;
-}
-
-input {
-    padding: 5px 10px;
-    width: 100%;
-    margin: 10px 0 !important;
 }
 
 #login_button {

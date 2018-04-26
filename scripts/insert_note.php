@@ -9,7 +9,8 @@
 
 //
 // connect to database using session variables ( user/pass )
-$mysqli = mysqli_connect("localhost", "root", "root", "final_project_db") or die(mysql_error());
+//$mysqli = mysqli_connect("localhost", "root", "root", "final_project_db") or die(mysql_error());
+include ('db_connect.php');
 
 // 
 // check if note title and note text -> store to variables
