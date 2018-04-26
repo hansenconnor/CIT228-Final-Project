@@ -16,11 +16,10 @@ include ('db_connect.php');
 // check if note title and note text -> store to variables
 if(count(array_filter($_POST))!=count($_POST)){
   // TODO add span error if one or more inputs are empty
-    echo ("something is empty");
     header("Location: ../dashboard.php");
   }
   else {
-    echo ("All form fields filled");
+    //echo ("All form fields filled");
       $noteUsername = $_SESSION['username'];
       $noteTitle = $_POST['note_title'];
       $noteText = $_POST['note_text'];

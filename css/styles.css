@@ -31,7 +31,11 @@ input {
 }
 
 .createNote {
-    color: #FFF;
+    color: rgba(0,0,0,0.5);
+}
+
+.createNote:hover {
+    color: #FFF ;
 }
 
 #results {
@@ -41,6 +45,9 @@ input {
 .note-header {
     align-items: center;
     display: flex;
+}
+#empty-notes {
+    margin-top: 100px;
 }
 
 .submit {
@@ -120,7 +127,7 @@ input {
 }
 
 a:hover {
-    color: black !important;
+    /* color: black !important; */
 }
 
 button:hover {

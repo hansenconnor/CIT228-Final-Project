@@ -2,6 +2,7 @@ $(document).ready(function(){
 
     $(".createNote").click(function() {
         $('.note-modal').css('display','block');
+        $( "input[name=note_title]" ).focus();
     });
 
     $(".cancelNote").click(function() {

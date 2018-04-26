@@ -72,7 +72,7 @@ if (mysqli_num_rows($result) >= 1) {
 	exit;
 } else {
   // note doesn't exist -> redirect to empty notes dash
-  include('empty-notes.php');
+  echo "<script>location.href = 'empty-notes.php';</script>";
 }
 
 //

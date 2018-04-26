@@ -1,12 +1,37 @@
-<!-- TODO add buttons to create, edit, and remove notes -->
+<!-- start session -->
+<?php session_start(); ?>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
 
-      <!-- Each note will have the following properties: title, date created, content, and priority. 
-           Priorities will be determined by a dropdown selector with the following options: 
-           None (default), low, medium, and high. 
-           Priorities will be represented by a specific color when viewed on the dashboard. 
-      -->
+  <title>Dashboard</title>
+  <meta name="author" content="Connor Hansen">
+    
+  <!-- custom styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
-      <section id="empty-notes">
+  <!-- jQuery -->
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header>
+<nav>
+          <ul id="main-menu">
+            <li><a href="scripts/logout.php">Logout</a></li>  
+        </ul>
+        </nav>
+</header>
+<section id="empty-notes">
             <div class="container">
                 <div class="row">
                   <!-- TODO populate this field with notes once user is logged in -->
@@ -30,12 +55,17 @@
                       <form class="contact-form" action="scripts/insert_note.php" method="POST">
                         <input type="text" name="note_title" placeholder="Note Title">
                         <br>
-                        <input type="text" name="note_text" placeholder="Begin typing your note...">
-                        <a href="#" class="btn cancelNote" style="background-color: #cf372f;">Cancel</a>
-                        <input  class="btn" type="submit"></input>
+                        <textarea name="note_text" cols="30" rows="10" placeholder="Begin typing your note..."></textarea>
+                        <input  class="btn submit" type="submit"></input>
+                        <a href="#" class="btn cancelNote">Cancel</a>
                         <!-- TODO reset input fields when cancel button is clicked -->
                       </form>
                     </div>
                 </div>
             </div>
         </section>
+        <footer><script src="js/helper.js"></script></footer>
+</body>
+</html>
+
+      
