@@ -53,33 +53,32 @@
                     <span style="display:block; width:100%;"><h2>Notes</h2></span><br>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-8 offset-md-2 text-center">
+                    <img id="loading-image" src="assets/loaders/spinner.gif" alt="Loading GIF">
+                </div>
+            </div>
+            
             <!-- get all notes and format in html -->
             <script>
-                $.ajax({url: "scripts/display_notes.php"}).done(function( html ) {
+                $('#loading-image').show();
+                $.ajax({
+                    url: "scripts/display_notes.php",
+                    cache: false,
+                    success: function( html ) {
                         $("#results").append(html);
-                    });
+                    },
+                    complete: function(){
+                        $('#loading-image').hide();
+                    }
+                });
             </script>
         </div>
     </section>
   
     <!-- Hidden modal for note creation (possibly edit/deletion later on...) -->
     <!-- Displayed upon clicking 'create note' button -->
-    <section class="note-modal">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                  <form class="contact-form" action="scripts/insert_note.php" method="POST">
-                    <input type="text" name="note_title" placeholder="Note Title">
-                    <br>
-                    <textarea name="note_text" cols="30" rows="10" placeholder="Begin typing your note..."></textarea>
-                    <input  class="btn submit" type="submit"></input>
-                    <a href="#" class="btn cancelNote">Cancel</a>
-                    <!-- TODO reset input fields when cancel button is clicked -->
-                  </form>
-                </div>
-            </div>
-        </div>
-    </section>
+    <?php include('includes/note-form.html'); ?>
 
     <footer><script src="js/helper.js"></script></footer>
 </body>

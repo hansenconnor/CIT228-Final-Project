@@ -28,7 +28,7 @@ if (mysqli_num_rows($result) >= 1) {
                     echo('<img src="assets/icons/pencil-edit-button.png" class="edit-note" id="'.$row["id"].'"/>');
                     echo('<img src="assets/icons/close.png" class="delete-note" id="'.$row["id"].'"/>');
                 echo ('</div>');
-                echo ('<div class="note-text"><p>'. $text .'</p></div>');
+                echo ('<div class="note-text"><p id="'.$row["id"].'">'. $text .'</p></div>');
             echo ('</div>');
         echo ('</div>');
     }

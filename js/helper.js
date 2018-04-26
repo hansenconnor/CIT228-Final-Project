@@ -6,7 +6,10 @@ $(document).ready(function(){
     });
 
     $(".cancelNote").click(function() {
-        $('.note-modal').css('display','none')
+        $('.note-modal').css('display','none');
+            
+        // reset form action
+        $('#note-form').attr('action', 'scripts/insert_note.php');
     });
 
 
@@ -26,7 +29,7 @@ $(document).ready(function(){
        $('body').on('click', '.delete-note', function (e) {
         var answer = confirm("Delete note?")
         if (answer) {
-            event.stopPropagation();  // prevent the parent div from expanding on click
+            e.stopPropagation();  // prevent the parent div from expanding on click
             var del_id = $(this).attr('id');
             $.ajax({
                type:'POST',
@@ -39,33 +42,38 @@ $(document).ready(function(){
             });
         }
         else {
-            event.stopPropagation();
+            e.stopPropagation();
             return;
         }
       });
 
+      //
       // handle edit note
+      //
       $('body').on('click', '.edit-note', function (e) {
-        
-        // TODO display note edit form with submit button which calls the edit_entry script
-        
 
-        
-        
-        
-        //var answer = confirm("Delete note?")
+        e.stopPropagation();
 
-        // get the id of the clicked note-title
-        // var id = $(this).attr('id');
+        // get the ID of the selected note
+        var noteID = $(this).attr('id');
 
-        // when the edit button is clicked, the note title and content with matching id 
-        // should become editable
-        // $('.note-title#' + id).attr('contenteditable', 'true');
-        // $('.note-title#' + id).focus();
+        // get the current note title and content
+        var noteTitle = $('#' + noteID + " .note-title").text();
+        var noteText = $('#' + noteID + " .note-text").text();
 
-        // append a 'done' button to the div which calls the edit_entry script
+        // populate the form with the note content
+        $('input[name=note_title]').val(noteTitle);   
+        $('textarea[name=note_text]').val(noteText);
         
-        // the note wrapper to append the button to
-        // $('.note-wrapper#' + id).append("Done Editing Button");
+        // change form action to update_entry.php
+        $('#note-form').attr('action', 'scripts/update_entry.php');
+
+        // display the edit note form
+        $('.note-modal').css('display','block');
+        $( "input[name=note_title]" ).focus();
+
+        $('input[name=note_id]').val(noteID);
       });
+
+      $()
  });

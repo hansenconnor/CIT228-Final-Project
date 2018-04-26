@@ -48,22 +48,8 @@
       
         <!-- Hidden modal for note creation (possibly edit/deletion later on...) -->
         <!-- Displayed upon clicking 'create note' button -->
-        <section class="note-modal">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                      <form class="contact-form" action="scripts/insert_note.php" method="POST">
-                        <input type="text" name="note_title" placeholder="Note Title">
-                        <br>
-                        <textarea name="note_text" cols="30" rows="10" placeholder="Begin typing your note..."></textarea>
-                        <input  class="btn submit" type="submit"></input>
-                        <a href="#" class="btn cancelNote">Cancel</a>
-                        <!-- TODO reset input fields when cancel button is clicked -->
-                      </form>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <?php include('includes/note-form.html'); ?>
+
         <footer><script src="js/helper.js"></script></footer>
 </body>
 </html>

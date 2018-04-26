@@ -164,6 +164,7 @@ h1 {
     height: calc(100% - 75px);
 }
 
+
 .note-modal {
     display: none;
     position: fixed;
@@ -173,7 +174,7 @@ h1 {
     width: 100%;
 }
 
-.contact-form {
+#note-form {
     background: #ffffff !important;
     height: auto;
     margin: 100px auto;
