@@ -19,6 +19,10 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 
+  <link rel="stylesheet" href="plugins/css/slicknav.min.css" />
+  <script src="plugins/js/jquery.slicknav.min.js"></script>
+
+
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
@@ -31,12 +35,17 @@
 <body>
     <header>
         <nav>
-            <div id ="mobile-menu">
-                <span class></span>
-            </div>
             <ul id="main-menu">  
-                <li><a href="#" id="create-json-button">Export JSON</a></li>
-                <li><a href="#">Export XML</a></li>
+                <li><a href="dashboard.php">Home</a></li>  
+                <li class="menu-item">
+                    <a href="#">Scripts</a>
+                    <ul>
+                        <li><a href="#" id="create-json-button">Export JSON</a></li>
+                        <li><a href="notes-json.php" id="#">Read JSON</a></li>
+                        <li><a href="#">Export XML</a></li>
+                        <li><a href="#">Read XML</a></li>
+                    </ul>
+                </li>
                 <li><a href="scripts/logout.php">Logout</a></li>  
             </ul>
         </nav>
@@ -44,38 +53,35 @@
 
 
       <section id="notes">
-        <div class="container" id="results">
+        <div class="container" style="margin-top:100px;">
+
             <div class="row">
-              <!-- TODO populate this field with notes once user is logged in -->
-              <!-- TODO Add initial message 'You don't have any notes yet! -->
-              <!-- Click here to create your first note... -->
                 <div class="col-md-8 offset-md-2 text-center">
                     <a href="#" class="btn createNote" style="background-color: #2ecc71;">Create Note</a>
                 </div>
-                <div class="col-md-8 offset-md-2">
-                    <span style="display:block; width:100%;"><h2>Notes</h2></span><br>
-                </div>
             </div>
+            
             <div class="row">
-                <div class="col-md-8 offset-md-2 text-center">
-                    <img id="loading-image" src="assets/loaders/spinner.gif" alt="Loading GIF">
+                <div class="col-md-8 offset-md-2" id="results">
+                    <h2>Notes</h2>
+                    <img id="loading-image" src="assets/loaders/spinner.gif" alt="Loading GIF" style="margin:0 auto;">
+                    <!-- get all notes and format in html -->
+                    <script>
+                        $('#loading-image').show();
+                        $.ajax({
+                            url: "scripts/display_notes.php",
+                            cache: false,
+                            success: function( html ) {
+                                $("#results").append(html);
+                            },
+                            complete: function(){
+                                $('#loading-image').hide();
+                            }
+                        });
+                    </script>
                 </div>
             </div>
             
-            <!-- get all notes and format in html -->
-            <script>
-                $('#loading-image').show();
-                $.ajax({
-                    url: "scripts/display_notes.php",
-                    cache: false,
-                    success: function( html ) {
-                        $("#results").append(html);
-                    },
-                    complete: function(){
-                        $('#loading-image').hide();
-                    }
-                });
-            </script>
         </div>
     </section>
   
@@ -83,6 +89,6 @@
     <!-- Displayed upon clicking 'create note' button -->
     <?php include('includes/note-form.html'); ?>
 
-    <footer><script src="js/helper.js"></script></footer>
+    <?php include('includes/footer.php'); ?>
 </body>
 </html>

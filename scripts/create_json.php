@@ -15,9 +15,7 @@ $notes_array = array();
 // store result in array
 while ($row = mysqli_fetch_assoc($result)) {
     $row_array['id'] = $row['id'];
-    $row_array['username'] = $row['username'];
     $row_array['title'] = $row['title'];
-    $row_array['note'] = $row['note'];
 
     array_push($notes_array,$row_array);
 }

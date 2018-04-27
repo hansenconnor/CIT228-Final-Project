@@ -1,5 +1,13 @@
 $(document).ready(function(){
     
+
+    $(function(){
+        $('#main-menu').slicknav({
+            removeIds: false,
+            prependTo: "header"
+        });
+    });
+
     $(".createNote").click(function() {
         $('.note-modal').fadeIn(200);
         $( "input[name=note_title]" ).focus();

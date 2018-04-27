@@ -26,6 +26,27 @@ p {
     height: 100%;
 }
 
+.dropdown-list {
+    visibility: hidden;
+    position: absolute;
+    top: 75px;
+    padding: 0;
+    box-shadow: 0px 5px 10px -5px rgba(0,0,0,0.1);
+    background:#FFF;
+}
+
+.dropdown-item {
+    display: block;
+    float: left;
+    padding: 0 !important;
+}
+
+#loading-image {
+    width: 50px;
+    display: block;
+    margin: 15px auto;
+}
+
 #loader-modal {
     text-align: center;
     display: flex;
@@ -63,10 +84,6 @@ input {
 
 .createNote:hover {
     color: #FFF ;
-}
-
-#results {
-    margin-top: 100px;
 }
 
 .note-header {
@@ -125,8 +142,7 @@ input {
 }
 
 .note-wrapper {
-    padding-top: 20px;
-    padding-bottom: 15px;
+    padding: 15px;
     margin-bottom: 15px;
     border-radius: 5px;
     -webkit-box-shadow: 0 0px 5px rgba(0, 0, 0, 0.15);
@@ -151,10 +167,6 @@ input {
 .note-text {
     display: none;
     padding: 25px;
-}
-
-a:hover {
-    /* color: black !important; */
 }
 
 button:hover {
@@ -215,8 +227,12 @@ h1 {
     border-radius: 10px;
 }
 
+#note-json {
+    margin-top: 100px;
+}
+
 nav {
-    display: block;
+    display: none !important;
     height: 75px;
     padding: 0 20px;
     -webkit-box-shadow: 0px 5px 10px -5px rgba(0,0,0,0.1);
@@ -224,7 +240,7 @@ nav {
     box-shadow: 0px 5px 10px -5px rgba(0,0,0,0.1);
 }
 
-#main-menu {
+/* #main-menu {
     display: flex;
     align-items: center;
     height: 100%;
@@ -235,7 +251,6 @@ nav {
 }
 
 #main-menu li {
-    text-align: center;
     display: inline;
 }
 
@@ -255,7 +270,7 @@ nav {
 
 #main-menu a:hover {
     color: #000000;
-}
+} */
 
 .vertical-center {
     min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
@@ -299,4 +314,13 @@ fieldset {
     border-radius: 5px;
     padding: 25px;
     margin: 50px 0;
+}
+
+
+
+/* Media Queries */
+@media screen and (min-width:768px) {
+    /* .slicknav_menu {
+        display:none;
+    } */
 }

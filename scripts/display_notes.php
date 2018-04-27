@@ -21,8 +21,7 @@ if (mysqli_num_rows($result) >= 1) {
     while($row = $result->fetch_assoc()) {
         $title = $row["title"];
         $text = $row["note"];
-        echo ('<div class="row">');
-            echo ('<div class="col-md-8 offset-md-2 note-wrapper" id="'.$row["id"].'">');
+            echo ('<div class="note-wrapper" id="'.$row["id"].'">');
                 echo ('<div class="note-header">');
                     echo ('<div class="note-title" id="'.$row["id"].'">' . $title . '</div>');
                     echo('<img src="assets/icons/pencil-edit-button.png" class="edit-note" id="'.$row["id"].'"/>');
@@ -30,7 +29,6 @@ if (mysqli_num_rows($result) >= 1) {
                 echo ('</div>');
                 echo ('<div class="note-text"><p id="'.$row["id"].'">'. $text .'</p></div>');
             echo ('</div>');
-        echo ('</div>');
     }
     // mysql_free_result($result);
 } else {
