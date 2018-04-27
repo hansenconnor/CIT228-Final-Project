@@ -24,6 +24,8 @@ while ($row = mysqli_fetch_assoc($result)) {
     $myfile = fopen("../JSON/notes.json", "w") or die("Unable to open file!");
     $printString = json_encode($notes_array);
     fwrite($myfile, $printString);
-    echo "The file has been created";
     fclose($myfile);
+
+    // redirect to dashboard
+    // header("Location: ../dashboard.php");
 ?>

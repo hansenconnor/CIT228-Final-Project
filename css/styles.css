@@ -16,6 +16,33 @@ p {
     color:rgba(0, 0, 0, .5);
 }
 
+.modal-container {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#loader-modal {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff !important;
+    height: auto;
+    margin: 0;
+    overflow: hidden !important;
+    width: 100%;
+    -webkit-box-shadow: 0 0px 15px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 0px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.15);
+    padding: 50px;
+    border-radius: 10px;
+}
+
 textarea {
     width: 100%;
     border-radius: 5px;

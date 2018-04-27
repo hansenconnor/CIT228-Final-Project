@@ -35,7 +35,7 @@
                 <span class></span>
             </div>
             <ul id="main-menu">  
-                <li><a href="scripts/create_json.php">Export JSON</a></li>
+                <li><a href="#" id="create-json-button">Export JSON</a></li>
                 <li><a href="#">Export XML</a></li>
                 <li><a href="scripts/logout.php">Logout</a></li>  
             </ul>
