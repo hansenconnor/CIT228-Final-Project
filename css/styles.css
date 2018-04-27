@@ -16,6 +16,25 @@ p {
     color:rgba(0, 0, 0, .5);
 }
 
+submit:hover {
+    cursor: pointer;
+}
+
+label {
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 0px !important;
+}
+
+.login-section {
+    background-color: #f9f9f9;
+}
+
+.auth-form-header {
+    font-size: 24px;
+    margin: 30px auto 15px;
+}
+
 .modal-container {
     position: fixed;
     display: flex;
@@ -73,7 +92,8 @@ textarea {
 input {
     padding: 5px 0px 5px 20px;
     width: 100%;
-    margin: 10px 0 !important;
+    margin-top:5px !important;
+    margin-bottom: 15px !important;
     border-radius: 5px;
     border: 1px solid rgba(0,0,0,0.1);
 }
@@ -277,8 +297,8 @@ nav {
     min-height: 100vh; 
     display: flex;
     align-items: center;
-    background: url('../assets/images/pexels-photo-911738.jpeg');
-    background-size: cover;
+    /* background: url('../assets/images/pexels-photo-911738.jpeg'); */
+    /* background-size: cover; */
 }
 
 fieldset {
@@ -307,13 +327,13 @@ fieldset {
 }
 
 .login_container {
-    -webkit-box-shadow: 0px 8px 21px 1px rgba(0,0,0,0.1);
+    /* -webkit-box-shadow: 0px 8px 21px 1px rgba(0,0,0,0.1);
     -moz-box-shadow: 0px 8px 21px 1px rgba(0,0,0,0.1);
-    box-shadow: 0px 8px 21px 1px rgba(0,0,0,0.1);
-    background-color: #fafafa;
+    box-shadow: 0px 8px 21px 1px rgba(0,0,0,0.1); */
+    background-color: #FFF;
     border-radius: 5px;
+    border:1px solid #d8dee2;
     padding: 25px;
-    margin: 50px 0;
 }
 
 

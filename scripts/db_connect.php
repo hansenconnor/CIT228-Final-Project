@@ -7,4 +7,4 @@
 // TODO: Store as environment variables
 
 ?>
-<?php $mysqli = mysqli_connect("localhost", "root", "", "final_project_db") or die ?>
+<?php $mysqli = mysqli_connect("localhost", "root", "root", "final_project_db") or die ?>

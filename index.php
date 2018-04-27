@@ -21,15 +21,20 @@
 </head>
 
 <body>
-    <section class="form-section vertical-center">
+    <section class="form-section vertical-center login-section">
         <div class="container">
             <div class="row menu-row">
-                <div class="col-md-6 offset-md-3 login_container">
-                  <h1 class="text-center">Login</h1>
+              <div class="col-md-6 offset-md-3 text-center">
+              <img src="assets/icons/notely-logo.png" width="50px" alt="Notely Logo" />
+              <h1 class="auth-form-header">Sign in to Notely</h1>
+              </div>
+                <div class="col-md-4 offset-md-4 login_container">
                   <form action="userlogin.php" method="post">
-                    <input name="username" placeholder="Username" type="text">
-                    <input type="password" name="password" placeholder="Password" id="">
-                    <button type="submit" id="login_button">Login</button>
+                  <label for="username">Username</label>
+                    <input name="username" type="text">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="">
+                    <button type="submit" id="login_button">Sign In</button>
                     <?php
                       if(isset($_SESSION["error"])){
                           $error = $_SESSION["error"];
