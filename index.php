@@ -21,31 +21,36 @@
 </head>
 
 <body>
-    <section class="form-section vertical-center login-section">
-        <div class="container">
-            <div class="row menu-row">
+  <section class="form-section vertical-center login-section">
+      <div class="container">
+          <div class="row menu-row">
+
               <div class="col-md-6 offset-md-3 text-center">
-              <img src="assets/icons/notely-logo.png" width="50px" alt="Notely Logo" />
-              <h1 class="auth-form-header">Sign in to Notely</h1>
+                  <img src="assets/icons/notely-logo.png" width="50px" alt="Notely Logo" />
+                  <h1 class="auth-form-header">Sign in to Notely</h1>
               </div>
-                <div class="col-md-4 offset-md-4 login_container">
+
+              <div class="col-md-4 offset-md-4">
+                <div class="login_container">
                   <form action="userlogin.php" method="post">
-                  <label for="username">Username</label>
-                    <input name="username" type="text">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="">
-                    <button type="submit" id="login_button">Sign In</button>
-                    <?php
-                      if(isset($_SESSION["error"])){
-                          $error = $_SESSION["error"];
-                          echo ("<span style='color:red;'>$error</span>");
-                      }
-                    ?>  
-                  </form>
+                        <label for="username">Username</label>
+                        <input name="username" type="text">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="">
+                        <button type="submit" id="login_button">Sign In</button>
+                        <?php
+                          if(isset($_SESSION["error"])){
+                              $error = $_SESSION["error"];
+                              echo ("<span style='color:red;'>$error</span>");
+                          }
+                        ?>
+                    </form>
                 </div>
-            </div>
-        </div>
-    </section>
+                <p class="create-account-callout">New to Notely? <a href="join.php">Create an Account.</a></p>
+              </div>
+          </div>
+      </div>
+  </section>
 
   <!-- includes helpers if needed -->
   <!-- <script src="js/scripts.js"></script> -->

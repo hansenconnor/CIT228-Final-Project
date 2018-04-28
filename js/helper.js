@@ -107,6 +107,28 @@ $(document).ready(function(){
         
     });
 
+    $("#signup-form").submit(function(event){
+
+        displayLoader("Creating account...");
+
+        event.preventDefault(); //prevent default action 
+        var post_url = $(this).attr("action"); //get form action url
+        var request_method = $(this).attr("method"); //get form GET/POST method
+        var form_data = $(this).serialize(); //Encode form elements for submission
+
+        setTimeout(function(){
+            $.ajax({
+                url : post_url,
+                type: request_method,
+                data : form_data
+            }).done(function(response){ //
+                // alert("done");
+                //$('#spinner').replaceWith('<img src="assets/icons/checked.png" width="50px" alt="Checked Icon" />');
+                $('#signup-form').append(response);
+            });
+        }, 1500);
+    });
+
     function displayLoader (loadingMessage){
         // append the loader to the DOM
         $('body').append('<div class="modal-container"><div class="container"><div class="row"><div class="col-md-6 offset-md-3"><div id="loader-modal"><img id="spinner" src="assets/loaders/spinner.gif" width="50px" alt="Loading Animation" /><span id="loader-modal-title">'+ loadingMessage +'</span></div></div></div></div></div>');

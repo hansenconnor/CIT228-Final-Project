@@ -37,19 +37,38 @@ and redirecting to the appropriate page... Move this check to the login script
 <body>
 
 <header>
-<nav>
-<ul id="main-menu">
-    <li><a href="dashboard.php">Home</a></li>  
-    <li class="menu-item">
-        <a href="#">Scripts</a>
-        <ul>
-            <li><a href="#" id="create-json-button">Export JSON</a></li>
-            <li><a href="notes-json.php" id="#">Read JSON</a></li>
-            <li><a href="#">Export XML</a></li>
-            <li><a href="#">Read XML</a></li>
-        </ul>
-    </li>
-    <li><a href="scripts/logout.php">Logout</a></li>  
-</ul>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"><img src="assets/icons/notely-logo.png" width="25px" alt=""></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Join <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="dashboard.php">Home</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Scripts
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" id="create-json-button" href="#">Export JSON</a>
+          <a class="dropdown-item" href="notes-json.php">Read JSON</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Export XML</a>
+          <a class="dropdown-item" href="#">Read XML</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="scripts/logout.php">Logout</a>
+      </li>
+    </ul>
+  </div>
 </nav>
 </header>
