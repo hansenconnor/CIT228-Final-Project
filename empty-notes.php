@@ -18,7 +18,7 @@
         <!-- Displayed upon clicking 'create note' button -->
         <?php include('includes/note-form.html'); ?>
 
-        <footer><script src="js/helper.js"></script></footer>
+        <?php include('includes/footer.php'); ?>
 </body>
 </html>
 

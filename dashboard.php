@@ -43,19 +43,6 @@ if(!(isset($_SESSION["username"])))
 
 <body>
 
-<header>
-        <nav>
-          <ul id="main-menu">
-            <li><a href="#">Do</a></li>
-            <li><a href="#">I</a></li>
-            <li><a href="#">Even</a></li>
-            <li><a href="#">Need</a></li>
-            <li><a href="#">These?</a></li>
-            <li><a href="#">?</a></li>
-          </ul>
-        </nav>
-      </header>
-
 <?php
 $mysqli = mysqli_connect("localhost", "root", "root", "final_project_db") or die(mysql_error());
   //
